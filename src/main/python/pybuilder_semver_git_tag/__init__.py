@@ -35,6 +35,7 @@ def initialize_semver_git_tag(project):
     """ Init default plugin project properties. """
     project.plugin_depends_on('GitPython')
     project.plugin_depends_on('semver')
+    # branch2
     # Part for develop increment - 'major', 'minor' or 'patch'
     project.set_property_if_unset('semver_git_tag_increment_part', 'patch')
     # Git repository directory path.
