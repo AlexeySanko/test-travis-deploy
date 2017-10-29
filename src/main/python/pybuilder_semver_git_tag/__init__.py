@@ -16,7 +16,7 @@
 
 """
     Plugin which provides dynamic project version based on SemVer git tag.
-    branch3
+    branch-tag
 """
 import git
 from pybuilder.core import before, init, use_plugin
