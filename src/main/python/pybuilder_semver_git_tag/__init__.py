@@ -16,7 +16,7 @@
 
 """
     Plugin which provides dynamic project version based on SemVer git tag.
-    Commit2
+    branch-tag
 """
 import git
 from pybuilder.core import before, init, use_plugin
@@ -33,8 +33,8 @@ use_plugin("python.core")
 @init
 def initialize_semver_git_tag(project):
     """ Init default plugin project properties. """
-    project.plugin_depends_on('GitPython')
     project.plugin_depends_on('semver')
+    project.plugin_depends_on('GitPython')
     # Part for develop increment - 'major', 'minor' or 'patch'
     project.set_property_if_unset('semver_git_tag_increment_part', 'patch')
     # Git repository directory path.
